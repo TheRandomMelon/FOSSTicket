@@ -1,16 +1,17 @@
 // Variables
 $background: #232323;
 $text-color: white;
-$link-color: #d42d2d;
-$link-hover-color: #ff3737;
+$link-color: #ff4747;
+$link-hover-color: #e92a2a;
+$link-disabled-color: #7a1313;
 $nav-background: #454545;
-$hero-background: #000000;
+$hero-background: #c52b2b;
 
 $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 body {
     margin: 0px;
-    background: $background; 
+    background: $background;
     font-family: $font-family;
     color: $text-color;
 }
@@ -88,4 +89,44 @@ footer p {
 
 .hero-body {
     margin: 2rem;
+}
+
+ul li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+button {
+    background: $link-color;
+    font-family: $font-family;
+    font-size: 16px;
+
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition: all 200ms ease;
+    color: $text-color;
+}
+
+button:hover, button:active {
+    background: $link-hover-color;
+}
+
+button:disabled {
+    background: $link-disabled-color;
+}
+
+input {
+    background: $nav-background;
+    border-radius: 4943924383489px;
+    border: none;
+    transition: all 75ms ease;
+
+    padding: 10px;
+    min-width: 300px;
+}
+
+input:focus, input:active {
+    border: 3px solid $link-color;
 }
