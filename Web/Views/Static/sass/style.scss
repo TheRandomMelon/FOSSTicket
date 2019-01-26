@@ -7,6 +7,14 @@ $link-disabled-color: #7a1313;
 $nav-background: #454545;
 $hero-background: #c52b2b;
 
+$code-color: #24242485;
+$pre-color: #44444480;
+
+$notif-generic: #454545;
+$notif-danger: $hero-background;
+$notif-warning: #c7af2a; 
+$notif-info: #229eb4;
+
 $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 body {
@@ -29,6 +37,10 @@ a:hover, a:focus {
     color: $link-hover-color;
 }
 
+i.fas, i.fal, i.fab, i.far {
+    margin-right: 3px;
+}
+
 header {
     background: $nav-background;
     width: 100%;
@@ -47,9 +59,15 @@ header .header-item {
     vertical-align: middle;
 }
 
+.header-item.right {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
 .header-item a {
     display: inline-flex;
     align-self: center;
+    text-decoration: none;
 
     color: $text-color !important;
     font-weight: bold;
@@ -58,6 +76,10 @@ header .header-item {
 .header-item a:hover, .header-item a:focus {
     background: $background;
     padding: 1.07rem;
+}
+
+.header-item a i {
+    font-size: 18px;
 }
 
 header img {
@@ -129,4 +151,40 @@ input {
 
 input:focus, input:active {
     border: 3px solid $link-color;
+}
+
+.notification {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    background: $notif-generic;
+    color: $text-color;
+}
+
+.notification.danger {
+    background: $notif-danger;
+}
+
+.notification.warning {
+    background: $notif-warning;
+}
+
+.notification.info {
+    background: $notif-info;
+}
+
+code {
+    padding: 0.2rem 0.4rem;
+    background: $code-color;
+}
+
+pre {
+    padding: 1rem;
+    background: $pre-color;
+}
+
+pre code {
+    background: none;
+    padding: none;
 }

@@ -15,10 +15,16 @@
   "homepage": "https://github.com/TheRandomMelon/FOSSTicket#readme",
   "dependencies": {
     "bcrypt": "^3.0.3",
+    "compression": "^1.7.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "fs-nextra": "^0.3.8",
     "multer": "^1.4.1",
     "mysql2": "^1.6.4",
-    "sequelize": "^4.42.0"
+    "require-reload": "^0.2.2",
+    "sequelize": "^4.42.0",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.6.0"
   }
 }

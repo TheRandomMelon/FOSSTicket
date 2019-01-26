@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../Partials/head.ejs %>
+</head>
+<body>
+    <% include ../Partials/nav.ejs %>
+
+    <div class="hero">
+        <div class="hero-body">
+            <h1>Dashboard</h1>
+            <p>Manage your tickets and FOSSTicket here.</p>
+        </div>
+    </div>
+
+    <main>
+        <% if (config.requiresSetup) { %>
+            <div class="notification danger">
+                <h3>Welcome to FOSSTicket!</h3>
+                <p>Remember to set <code>requiresSetup</code> in the config file to <code>false</code>, otherwise the homepage will prompt you to add more admins.</p>
+            </div>
+        <% } %>
+
+        <h2>Our UI is coded in E.</h2>
+        <p>No need to E.</p>
+    </main>
+
+    <% include ../Partials/footer.ejs %>
+</body>
+</html>
