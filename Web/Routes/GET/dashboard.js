@@ -10,11 +10,19 @@ module.exports = async(req, res) => {
 					id: session.dataValues.user_id,
 				},
 			}).then(user => {
-				res.render("dashboard.ejs", {
-					cookies: req.cookies,
-					session: session,
-					user: user,
-				});
+				if (user.dataValues.agent !== 1) {
+					res.render("Errors/403.ejs", {
+						cookies: req.cookies,
+						session: session,
+						user: user,
+					});
+				} else {
+					res.render("dashboard.ejs", {
+						cookies: req.cookies,
+						session: session,
+						user: user,
+					});
+				}
 			});
 		});
 	} else {
