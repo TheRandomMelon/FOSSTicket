@@ -4,6 +4,7 @@
     <% include ../partials/head %>
 </head>
 <body>
+    <% include ../partials/setuphead %>
     <div class="hero">
         <div class="hero-body">
             <h1 id="stepListing">Welcome to the quick FOSSTicket setup!</h1>
@@ -13,10 +14,10 @@
 
     <main id="step0">
         <form action="/" method="POST">
-            <input type="text" placeholder="Your full name"><br><br>
-            <input type="text" placeholder="Username"><br><br>
-            <input type="pass" placeholder="Password"><br><br>
-            <input type="pass" placeholder="Email address"><br><br>
+            <input type="text" name="fullname" placeholder="Your full name" minlength="1"><br><br>
+            <input type="text" name="username" placeholder="Username" minlength="1"><br><br>
+            <input type="password" name="password" placeholder="Password" minlength="8"><br><br>
+            <input type="email" name="email" placeholder="Email address" minlength="1"><br><br>
 
             <input type="submit" value="Sign up">
         </form>
