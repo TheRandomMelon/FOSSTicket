@@ -6,5 +6,5 @@
 A (hopefully) decent FOSS ticketing system (WIP)
 
 
-# Wiki
+## Wiki
 Read it [here](https://github.com/TheRandomMelon/FOSSTicket/wiki)
