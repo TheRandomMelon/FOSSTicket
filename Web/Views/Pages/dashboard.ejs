@@ -21,8 +21,24 @@
             </div>
         <% } %>
 
-        <h2>Our UI is coded in E.</h2>
-        <p>No need to E.</p>
+        <h2>User Information</h2>
+        <p>Since the dashboard, like, needs to actually be done, here's some user information in the meantime:</p>
+
+        <ul>
+            <li><b>User ID</b>: <%= user.dataValues.id %></li>
+            <li><b>Username</b>: <%= user.dataValues.username %></li>
+            <li><b>Full Name</b>: <%= user.dataValues.fullname %></li>
+            <li><b>Email</b>: <%= user.dataValues.email %></li>
+            <li>
+                <b>Agent</b>: 
+                <% if (user.dataValues.agent === 1) { %> 
+                    Yes 
+                <% } else { %> 
+                    No 
+                <% } %>
+            </li>
+            <li><b>Profile Picture</b>: <img width="56" style="margin-left: 5px; vertical-align: text-top; border-radius: 50%; box-shadow: 0px 0px 3px black;" src="<%= user.dataValues.pfp %>" /></li>
+        </ul>
     </main>
 
     <% include ../Partials/footer.ejs %>

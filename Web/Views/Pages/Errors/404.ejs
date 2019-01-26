@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../Partials/head.ejs %>
+</head>
+<body>
+    <% include ../Partials/nav.ejs %>
+
+    <div class="hero">
+        <div class="hero-body">
+            <h1>Error 404</h1>
+            <p>We couldn't find that page.</p>
+        </div>
+    </div>
+
+    <main>
+        <h2>How do I fix this?</h2>
+        <ul>
+            <li>Make sure the URL is typed in correctly.</li>
+            <li>Make sure the item you're trying to access exists, and that you have permission to view it.</li>
+        </ul>
+
+        <a href="/">
+            <button>
+                <i class="fas fa-home fa-fw"></i> Go home
+            </button>
+        </a>
+    </main>
+
+    <% include ../Partials/footer.ejs %>
+</body>
+</html>

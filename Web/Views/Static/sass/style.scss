@@ -9,182 +9,242 @@ $hero-background: #c52b2b;
 
 $code-color: #24242485;
 $pre-color: #44444480;
+$dropdown-background: #505050;
 
 $notif-generic: #454545;
 $notif-danger: $hero-background;
+$notif-success: #28b14a; 
 $notif-warning: #c7af2a; 
 $notif-info: #229eb4;
 
 $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 body {
-    margin: 0px;
-    background: $background;
-    font-family: $font-family;
-    color: $text-color;
+	margin: 0px;
+	background: $background;
+	font-family: $font-family;
+	color: $text-color;
 }
 
 main {
-    margin: 2rem;
+	margin: 2rem;
 }
 
 a, a:visited {
-    color: $link-color;
-    transition: all 200ms ease;
+	color: $link-color;
+	transition: all 200ms ease;
 }
 
 a:hover, a:focus {
-    color: $link-hover-color;
+	color: $link-hover-color;
 }
 
 i.fas, i.fal, i.fab, i.far {
-    margin-right: 3px;
+	margin-right: 5px;
+}
+
+i.fa-book, i.fa-home {
+	margin-right: 2px;
 }
 
 header {
-    background: $nav-background;
-    width: 100%;
+	background: $nav-background;
+	width: 100%;
 
-    display: flex;
-    flex-grow: 1;
-    align-content: center;
+	display: flex;
+	flex-grow: 1;
+	align-content: center;
 }
 
 header .header-item {
-    margin: 0rem 0.5rem;
+	margin: 0rem 0.5rem;
 }
 
 .header-item {
-    display: flex;
-    vertical-align: middle;
+	display: flex;
+	vertical-align: middle;
 }
 
 .header-item.right {
-    margin-left: auto;
-    margin-right: 1rem;
+	margin-left: auto;
+	margin-right: 1rem;
 }
 
 .header-item a {
-    display: inline-flex;
-    align-self: center;
-    text-decoration: none;
+	display: inline-flex;
+	align-self: center;
+	text-decoration: none;
 
-    color: $text-color !important;
-    font-weight: bold;
+	color: $text-color !important;
+	font-weight: bold;
 }
 
 .header-item a:hover, .header-item a:focus {
-    background: $background;
-    padding: 1.07rem;
+	background: $background;
+	padding: 1.07rem;
 }
 
 .header-item a i {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 header img {
-    height: 56px;
-    margin: 0rem 0.5rem;
+	height: 56px;
+	margin: 0rem 0.5rem;
 }
 
 footer {
-    background: $nav-background;
-    color: $text-color;
-    width: 100%;
-    padding: 1px 0rem;
-    
-    position: absolute;
-    bottom: 0;
+	background: $nav-background;
+	color: $text-color;
+	width: 100%;
+	padding: 1px 0rem;
 }
 
 footer p {
-    margin: 2rem;
+	margin: 2rem;
 }
 
 .hero {
-    background: $hero-background;
-    color: $text-color;
+	background: $hero-background;
+	color: $text-color;
 
-    width: 100%;
-    padding: 1rem 0rem;
+	width: 100%;
+	padding: 1rem 0rem;
 }
 
 .hero-body {
-    margin: 2rem;
+	margin: 2rem;
 }
 
 ul li:not(:last-child) {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 button {
-    background: $link-color;
-    font-family: $font-family;
-    font-size: 16px;
+	background: $link-color;
+	font-family: $font-family;
+	font-size: 16px;
 
-    border: none;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
+	border: none;
+	padding: 0.75rem;
+	border-radius: 0.5rem;
 
-    cursor: pointer;
-    transition: all 200ms ease;
-    color: $text-color;
+	cursor: pointer;
+	transition: all 200ms ease;
+	color: $text-color;
 }
 
 button:hover, button:active {
-    background: $link-hover-color;
+	background: $link-hover-color;
 }
 
 button:disabled {
-    background: $link-disabled-color;
+	background: $link-disabled-color;
 }
 
 input {
-    background: $nav-background;
-    border-radius: 4943924383489px;
-    border: none;
-    transition: all 75ms ease;
+	background: $nav-background;
+	border-radius: 4943924383489px;
+	border: none;
+	transition: all 75ms ease;
 
-    padding: 10px;
-    min-width: 300px;
+	padding: 10px;
+	min-width: 300px;
+}
+
+input[type="submit"] {
+	min-width: 0px;
+	border-radius: 0.5rem;
+	cursor: pointer;
 }
 
 input:focus, input:active {
-    border: 3px solid $link-color;
+	border: 3px solid $link-color;
 }
 
 .notification {
-    display: block;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+	display: block;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
 
-    background: $notif-generic;
-    color: $text-color;
+	background: $notif-generic;
+	color: $text-color;
 }
 
 .notification.danger {
-    background: $notif-danger;
+	background: $notif-danger;
 }
 
 .notification.warning {
-    background: $notif-warning;
+	background: $notif-warning;
 }
 
 .notification.info {
-    background: $notif-info;
+	background: $notif-info;
+}
+
+.notification.success {
+	background: $notif-success;
 }
 
 code {
-    padding: 0.2rem 0.4rem;
-    background: $code-color;
+	padding: 0.2rem 0.4rem;
+	background: $code-color;
 }
 
 pre {
-    padding: 1rem;
-    background: $pre-color;
+	padding: 1rem;
+	background: $pre-color;
 }
 
 pre code {
-    background: none;
-    padding: none;
+	background: none;
+	padding: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-flex;
+}
+
+.dropdown i.fas, .dropdown i.far, .dropdown i.fal {
+	font-size: 16px;
+}
+
+.dropdown-button i.fas, .dropdown-button i.far, .dropdown-button i.fal {
+	font-size: 18px;
+}
+
+.dropdown.right {
+	float: right;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: $dropdown-background;
+	top: 56px;
+	min-width: 160px;
+	border-top: none;
+	z-index: 10;
+}
+  
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: $nav-background;
+}
+  
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropdown-button {
+	background: $background;
+	padding: 1.07rem;
 }

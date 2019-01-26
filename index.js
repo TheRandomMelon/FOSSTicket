@@ -1,5 +1,12 @@
 const config = global.config = require("./config.js");
+const makeToken = global.makeToken = charNumber => {
+	let text = "";
+	let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=/[]{}";
 
+	for (let i = 0; i < charNumber; i++) { text += chars.charAt(Math.floor(Math.random() * chars.length)); }
+
+	return text;
+};
 const { createLogger, format, transports } = require("winston");
 const DailyRotateFile = require("winston-daily-rotate-file");
 

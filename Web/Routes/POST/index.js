@@ -12,7 +12,10 @@ module.exports = async(req, res) => {
 
 		values.password = bcrypt.hashSync(values.password, 10);
 
-		User.create({ username: values.username, fullname: values.fullname, password: values.password, email: values.email, agent: 1, pfp: "/img/logo.png" });
+		User.create({ username: values.username, fullname: values.fullname, password: values.password, email: values.email, agent: 1, pfp: "/img/pfp.png" })
+			.catch(err => {
+				winston.error(err);
+			});
 		res.redirect("/dashboard?firsttime=1");
 	} else {
 		res.send(`<html lang="en"><head>
@@ -25,6 +28,7 @@ module.exports = async(req, res) => {
 		</body></html>`);
 	}
 };
+
 module.exports.info = {
 	route: "/",
 };

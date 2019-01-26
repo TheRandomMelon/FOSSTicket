@@ -13,6 +13,8 @@ module.exports = {
 		config: true,
 		sequelize: true,
 		winston: true,
+		Session: true,
+		makeToken: true,
 	},
 	rules: {
 		"no-compare-neg-zero": "error",

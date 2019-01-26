@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../Partials/head.ejs %>
+</head>
+<body>
+    <% include ../Partials/nav.ejs %>
+
+    <div class="hero">
+        <div class="hero-body">
+            <h1>Error 500</h1>
+            <p>There's been a big screwup on the server's part?</p>
+        </div>
+    </div>
+
+    <main>
+        <h2>How do I fix this?</h2>
+        <ul>
+            <li>If you're the sysadmin, check out the code to make sure there isn't an error in it.</li>
+            <li>If you're a regular user, contact the sysadmin to fix this issue.</li>
+        </ul>
+
+        <a href="/">
+            <button>
+                <i class="fas fa-home fa-fw"></i> Go home
+            </button>
+        </a>
+    </main>
+
+    <% include ../Partials/footer.ejs %>
+</body>
+</html>

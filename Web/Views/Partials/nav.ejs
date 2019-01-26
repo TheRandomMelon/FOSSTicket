@@ -2,7 +2,7 @@
 	<img src="/img/logo.png">
 
 	<div class="header-item">
-		<a href="#">
+		<a href="/">
 			<i class="fas fa-fw fa-home"></i> Home
 		</a>
 	</div>
@@ -16,9 +16,23 @@
 			<i class="fas fa-fw fa-book"></i> Knowledge base
 		</a>
 	</div>
+	
 	<div class="header-item right">
-		<a href="/login">
-			<i class="fas fa-fw fa-sign-in-alt"></i> Log in
-		</a>
+		<% if (user !== null) { %>
+			<div class="dropdown right">
+				<a class="dropdown-button">
+					<i class="fas fa-user-circle"></i> <%= user.dataValues.username %>
+				</a>
+				
+				<div class="dropdown-content">
+					<a href="/dashboard"><i class="fas fa-fw fa-tachometer-alt"></i> Dashboard</a>
+					<a href="/signout"><i class="fas fa-fw fa-sign-out-alt"></i> Sign out</a>
+				</div>
+			</div>
+		<% } else { %>
+			<a href="/login">
+				<i class="fas fa-fw fa-sign-in-alt"></i> Log in
+			</a>
+		<% } %>
 	</div>
 </header>

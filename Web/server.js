@@ -2,6 +2,7 @@ const { readdir } = require("fs-nextra");
 const app = require("express")();
 const server = global.server = require("http").createServer(app);
 const ejs = require("ejs");
+const cookieParser = require("cookie-parser");
 const upload = require("multer")();
 const bcrypt = require("bcrypt");
 const reload = require("require-reload")(require);
@@ -18,6 +19,7 @@ module.exports = async() => {
 	app.use(require("body-parser").json());
 	app.use(require("body-parser").urlencoded({ extended: true }));
 	app.use(require("compression")());
+	app.use(cookieParser());
 	app.engine("ejs", ejs.renderFile);
 	app.set("view engine", "ejs");
 	app.set("views", `${__dirname}/Views/Pages`);
@@ -38,5 +40,7 @@ module.exports = async() => {
 		app.post(name, (req, res) => reload(`./Routes/POST/${i}`)(req, res));
 	}
 
+	app.use(async(req, res, next) => res.status(403).render("403.ejs"));
 	app.use(async(req, res, next) => res.status(404).render("404.ejs"));
+	app.use(async(req, res, next) => res.status(500).render("500.ejs"));
 };
